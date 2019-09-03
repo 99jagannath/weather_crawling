@@ -1,0 +1,104 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>showing weather result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+    
+    <h1>date : {{date}}</h1>
+    <h1>place : {{place}}</h1>
+    <h1>type : {{type}}</h1>
+    <table>
+        {% if type == 'today' %}
+        {% for i in contents %}
+        <tr>
+               
+                {% if i %}
+                   {{i}}
+                {% endif %}
+                
+        </tr>
+        {% endfor %}
+        {% endif %}
+        {% if type == 'hourbyhour' %}
+        {% for i in contents %}
+        <tr>
+               {% for j in i %}
+               {% if j %}
+                <th>
+                  {{j}}
+                </th>
+                {% endif %}
+                {% endfor %}  
+                
+                
+        </tr>
+        {% endfor %}
+        {% endif %}
+        {% if type == '5day' %}
+        {% for i in contents %}
+        <tr>
+               {% for j in i %}
+               {% if j %}
+               <th>
+                 {{j}}
+               </th>
+               {% endif %}
+                {% endfor %}  
+                
+                
+        </tr>
+        {% endfor %}
+        {% endif %}
+        {% if type == '10day' %}
+        {% for i in contents %}
+        <tr>
+               {% for j in i %}
+               {% if j %}
+               <th>
+                 {{j}}
+               </th>
+               {% endif %}
+                {% endfor %}  
+                
+                
+        </tr>
+        {% endfor %}
+        {% endif %}
+        {% if type == 'weekend' %}
+        {% for i in contents %}
+        <tr>
+               {% for j in i %}
+               {% if j %}
+               <th>
+                 {{j}}
+               </th>
+               {% endif %}
+                {% endfor %}  
+                
+                
+        </tr>
+        {% endfor %}
+        {% endif %}
+        {% if type == 'monthly' %}
+        {% for i in contents %}
+        <tr>
+               {% for j in i %}
+                <th>
+                  {{j}}
+                </th>
+                {% endfor %}  
+                
+                
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </table>
+</body>
+</html>

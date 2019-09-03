@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Check the weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+   <form action="result" method="POST">
+    {% csrf_token %}
+     <label>palce : </label><br>
+     <input type="text" name="place"><br>
+     <label>date</label><br>
+     <input type="date" name ="date"><br> 
+     <label>type: </label><br>
+     <input type="radio" name="type" value="today">today<br>
+     <input type="radio" name="type" value="hourbyhour">hourly<br>
+     <input type="radio" name="type" value="5day">5day<br>
+     <input type="radio" name="type" value="10day">10day<br>
+     <input type="radio" name="type" value="weekend">weekly<br>
+     <input type="radio" name="type" value="monthly">monthly<br><br>
+     <input type="submit">
+   </form> 
+</body>
+</html>
