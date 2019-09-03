@@ -7,4 +7,5 @@ then it shows some result according to the seaching key word in the class name '
 if the content under this class is empty then we work with default url(this may come generraly due to slow internet)
 then we search result according to the type by if else condition
 showing the results
-
+since the file has to be pip installable, here is the pip command to install it:
+pip install weather-crawling-app-99
